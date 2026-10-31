@@ -1,5 +1,21 @@
-# Kerenl Drvier
-## Structure
+# Kernel Driver
+
+Small kernel module exercises. Larger driver projects written from scratch live in
+[linux-device-driver](https://github.com/chinyakao/linux-device-driver).
+
+## Status
+
+| Folder | Status | Notes |
+|---|---|---|
+| [`hello/`](hello/) | Done | Minimal loadable module. |
+| [`char_device/`](char_device/) | Done | Character device with read/write and a user space test program. |
+| [`dell-wmi-sysman/`](dell-wmi-sysman/) | Done (study) | Upstream driver rebuilt out of tree to study and add debug output. Not my code; see its README. |
+| [`usb_device/`](usb_device/) | Planned | Not started. |
+| [`pci_device/`](pci_device/) | Planned | Not started. |
+
+New exercises start from [`README.template`](README.template).
+
+## Planned structure
 ```
 kernel-driver/
 ├── foundation/
@@ -28,55 +44,4 @@ kernel-driver/
 │   ├── tracing_scripts/
 │   └── qemu_configs/
 └── README.md
-
 ```
----
-
-### Week 1: Kernel Module Basics
-
-- [ ]  Install kernel headers and toolchains
-- [ ]  Write and compile a hello_world module
-- [ ]  Load/unload with `insmod` and `rmmod`
-- [ ]  Inspect logs via `dmesg`
-- [ ]  Exercise: Modify the message output
-
-### Week 2: Char Driver Intro
-
-- [ ]  Implement a basic char device using `register_chrdev`
-- [ ]  Implement `open`, `read`, `write`
-- [ ]  Understand user/kernel buffer operations
-- [ ]  Exercise: Write a user-space test program
-
-### Week 3: Char Driver with IOCTL
-
-- [ ]  Implement ioctl handling in driver
-- [ ]  Define command macros with `_IO`, `_IOR`, `_IOW`
-- [ ]  Exercise: Create user app to send/receive data via ioctl
-
-### Week 4: USB Driver
-
-- [ ]  Use `usb_driver` and `usb_device_id`
-- [ ]  Implement `probe` and `disconnect`
-- [ ]  Send/receive USB bulk messages
-- [ ]  Exercise: Detect specific USB device via your driver
-
-### Week 5: PCI Driver
-
-- [ ]  Use `pci_register_driver`
-- [ ]  Map BARs using `ioremap`
-- [ ]  Perform read/write with `readl/writel`
-- [ ]  Exercise: Simulate a PCI device using QEMU
-
-### Week 6: Block Driver
-
-- [ ]  Implement a virtual block device
-- [ ]  Understand `request_queue` and `gendisk`
-- [ ]  Format and mount the device using `mkfs`, `mount`
-- [ ]  Exercise: Create a RAM disk module
-
-### Week 7: Net Driver
-
-- [ ]  Register `net_device`
-- [ ]  Implement `ndo_start_xmit`
-- [ ]  Use `ping` or `tcpdump` to test packets
-- [ ]  Exercise: Build a loopback-like net driver
