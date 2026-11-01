@@ -32,4 +32,4 @@ Later areas, following the plan from my earlier notes: USB and PCI drivers,
 then laptop subsystems (DRM, ALSA, input, backlight) and power management.
 
 Notes on the Linux platform side (kernel builds, thermal, power, graphics) are
-in [linux_training](https://github.com/chinyakao/linux_training).
+in [linux-platform-enablement](https://github.com/chinyakao/linux-platform-enablement).

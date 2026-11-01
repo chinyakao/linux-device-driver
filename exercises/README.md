@@ -2,7 +2,7 @@
 
 Small kernel module exercises from when I started learning driver development.
 They were moved here from
-[linux_training](https://github.com/chinyakao/linux_training) with their git
+[linux-platform-enablement](https://github.com/chinyakao/linux-platform-enablement) with their git
 history. All three build against Ubuntu kernel 6.8 headers:
 
 ```bash

@@ -42,7 +42,7 @@ make check               # checkpatch.pl
 On a test machine (not your daily one) you can also run
 `sudo ./test_vthermal.sh` directly. The zone shows up under
 `/sys/class/thermal/` with type `vthermal`, so
-[`thermal_stress_test.sh`](https://github.com/chinyakao/linux_training/blob/main/thermal_stress_test.sh)
+[`thermal_stress_test.sh`](https://github.com/chinyakao/linux-platform-enablement/blob/main/thermal_stress_test.sh)
 records it alongside the real zones.
 
 The test applies a 60 °C heat load for 30 s, then removes it, and checks that:
