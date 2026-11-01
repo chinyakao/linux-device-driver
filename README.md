@@ -6,7 +6,7 @@ nothing experimental is loaded on the host.
 | Driver | Subsystem | Status |
 |---|---|---|
 | [`vthermal/`](vthermal/) | Thermal framework (thermal zone + cooling device, platform driver) | Builds and passes its QEMU test on Ubuntu kernel 6.8 |
-| [`exercises/`](exercises/) | Basics: hello module, character device, out-of-tree build of an upstream driver | Learning exercises |
+| [`exercises/`](exercises/) | Basics: hello module, character device | Learning exercises |
 
 ## Testing
 
