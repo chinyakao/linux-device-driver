@@ -1,12 +1,11 @@
 obj-m += virt_char.o
 
-KDIR := /lib/modules/$(shell uname -r)/build
-PWD := $(shell pwd)
+KDIR ?= /lib/modules/$(shell uname -r)/build
 
 all:
-	make -C $(KDIR) M=$(PWD) modules
+	$(MAKE) -C $(KDIR) M=$(CURDIR) modules
 	gcc test_char.c -o test_char
 
 clean:
-	make -C $(KDIR) M=$(PWD) clean
+	$(MAKE) -C $(KDIR) M=$(CURDIR) clean
 	rm -f test_char

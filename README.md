@@ -6,6 +6,7 @@ nothing experimental is loaded on the host.
 | Driver | Subsystem | Status |
 |---|---|---|
 | [`vthermal/`](vthermal/) | Thermal framework (thermal zone + cooling device, platform driver) | Builds and passes its QEMU test on Ubuntu kernel 6.8 |
+| [`exercises/`](exercises/) | Basics: hello module, character device, out-of-tree build of an upstream driver | Learning exercises |
 
 ## Testing
 
@@ -20,5 +21,15 @@ given kernel's headers, packs it with busybox into an initramfs, boots that
 kernel in QEMU, runs `test_<module>.sh`, and exits non-zero if the test fails.
 It uses KVM when `/dev/kvm` is available and falls back to emulation otherwise.
 
-Exercises and notes that came before this repo are in
-[linux_training](https://github.com/chinyakao/linux_training).
+## Roadmap
+
+- Port `vthermal` to the newer thermal binding API (6.13+).
+- Character device v2: misc device, `ioctl`, `poll`, sysfs attributes, KUnit tests.
+- A `firmware_attributes` style sysfs driver, written from scratch.
+- CI that builds every module against several kernel versions and runs checkpatch.
+
+Later areas, following the plan from my earlier notes: USB and PCI drivers,
+then laptop subsystems (DRM, ALSA, input, backlight) and power management.
+
+Notes on the Linux platform side (kernel builds, thermal, power, graphics) are
+in [linux_training](https://github.com/chinyakao/linux_training).

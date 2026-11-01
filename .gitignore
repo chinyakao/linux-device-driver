@@ -7,3 +7,4 @@
 Module.symvers
 modules.order
 .tmp_versions/
+exercises/char_device/test_char

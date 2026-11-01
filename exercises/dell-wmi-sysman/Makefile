@@ -1,6 +1,4 @@
-PWD := $(shell pwd) 
-KVERSION := $(shell uname -r)
-KERNEL_DIR = /usr/src/linux-headers-$(KVERSION)/
+KDIR ?= /lib/modules/$(shell uname -r)/build
 
 obj-$(CONFIG_DELL_WMI_SYSMAN)  += dell-wmi-sysman.o
 dell-wmi-sysman-objs := 	sysman.o		\
@@ -12,6 +10,6 @@ dell-wmi-sysman-objs := 	sysman.o		\
 				passwordattr-interface.o
 
 all:
-	make -C $(KERNEL_DIR) M=$(PWD) modules
+	$(MAKE) -C $(KDIR) M=$(CURDIR) modules
 clean:
-	make -C $(KERNEL_DIR) M=$(PWD) clean
+	$(MAKE) -C $(KDIR) M=$(CURDIR) clean
