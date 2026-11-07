@@ -31,5 +31,5 @@ It uses KVM when `/dev/kvm` is available and falls back to emulation otherwise.
 Later areas, following the plan from my earlier notes: USB and PCI drivers,
 then laptop subsystems (DRM, ALSA, input, backlight) and power management.
 
-Notes on the Linux platform side (kernel builds, thermal, power, graphics) are
-in [linux-platform-enablement](https://github.com/chinyakao/linux-platform-enablement).
+My notes on kernel builds, thermal, power, and graphics are
+in [client-linux-notes](https://github.com/chinyakao/client-linux-notes).
